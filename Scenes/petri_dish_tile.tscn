@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://beq4culrnoahj"]
+
+[ext_resource type="PackedScene" uid="uid://1a3fav561igo" path="res://Assets/Petri Dish.glb" id="1_0pjo1"]
+
+[node name="Petri Dish Tile" type="Node3D"]
+
+[node name="Petri Dish" parent="." instance=ExtResource("1_0pjo1")]

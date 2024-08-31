@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bc8epics1l6di"]
+
+[resource]
+albedo_color = Color(0.34978, 0.160055, 0.11588, 1)
+roughness = 0.85
+rim_tint = 0.64
+backlight = Color(0.254902, 0, 0.356863, 1)
+grow_amount = -1.616

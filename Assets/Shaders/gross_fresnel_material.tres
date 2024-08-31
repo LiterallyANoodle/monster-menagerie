@@ -1,0 +1,7 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://sbbh4vb8g27"]
+
+[ext_resource type="Shader" uid="uid://c8wm8ld8gy1gq" path="res://Assets/Shaders/gross_fresnel.tres" id="1_s7m2t"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_s7m2t")

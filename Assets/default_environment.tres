@@ -1,0 +1,12 @@
+[gd_resource type="Environment" load_steps=3 format=3 uid="uid://pair8nhqw5co"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xb421"]
+sky_top_color = Color(0.667739, 0.22478, 0.6867, 1)
+
+[sub_resource type="Sky" id="Sky_ks55n"]
+sky_material = SubResource("ProceduralSkyMaterial_xb421")
+
+[resource]
+sky = SubResource("Sky_ks55n")
+reflected_light_source = 2
+tonemap_mode = 3

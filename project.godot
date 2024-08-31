@@ -13,3 +13,16 @@ config_version=5
 config/name="Monster Menagerie"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+SignalBus="*res://Scenes/signal_bus.gd"
+
+[debug]
+
+gdscript/warnings/untyped_declaration=2
+gdscript/warnings/inferred_declaration=2
+
+[rendering]
+
+environment/defaults/default_environment="res://Assets/default_environment.tres"

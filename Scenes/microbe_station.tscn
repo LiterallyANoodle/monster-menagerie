@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://fdim630t5b75"]
+
+[ext_resource type="PackedScene" uid="uid://dk3bdbei75rl3" path="res://Assets/Table.glb" id="1_s8m6q"]
+[ext_resource type="MeshLibrary" uid="uid://xgjomwbvfh0o" path="res://Assets/petri_dish_tile.tres" id="2_ouoex"]
+
+[node name="Microbe Station" type="Node3D"]
+
+[node name="Table" parent="." instance=ExtResource("1_s8m6q")]
+
+[node name="GridMap" type="GridMap" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.75, 0.859105, -0.5)
+mesh_library = ExtResource("2_ouoex")
+cell_size = Vector3(0.25, 0.25, 0.25)
+cell_center_x = false
+cell_center_y = false
+cell_center_z = false
+data = {
+"cells": PackedInt32Array(0, 0, 0, 65535, 0, 0, 65534, 0, 0, 65533, 0, 0, 65535, 1, 0)
+}
+
+[editable path="Table"]

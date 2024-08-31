@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dfkwhcno6n8s7"]
+
+[ext_resource type="PackedScene" uid="uid://fdim630t5b75" path="res://Scenes/microbe_station.tscn" id="1_fstdr"]
+[ext_resource type="Environment" uid="uid://pair8nhqw5co" path="res://Assets/default_environment.tres" id="2_cld25"]
+
+[node name="House" type="Node3D"]
+
+[node name="Microbe Station" parent="." instance=ExtResource("1_fstdr")]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("2_cld25")
