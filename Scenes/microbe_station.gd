@@ -1,7 +1,7 @@
 extends Node3D
 class_name MicrobeStation
 
-@onready var petri_grid: GridMap = $PetriGrid
+@onready var petri_grid: ClickableGrid = $PetriGrid
 
 @export var grid_dimensions: Vector2i = Vector2i(4, 4)
 @export var table_height: float = 0.85344
