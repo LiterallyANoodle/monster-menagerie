@@ -1,14 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://fdim630t5b75"]
+[gd_scene load_steps=4 format=3 uid="uid://fdim630t5b75"]
 
+[ext_resource type="Script" path="res://Scenes/microbe_station.gd" id="1_0827l"]
 [ext_resource type="PackedScene" uid="uid://dk3bdbei75rl3" path="res://Assets/Table.glb" id="1_s8m6q"]
 [ext_resource type="MeshLibrary" uid="uid://xgjomwbvfh0o" path="res://Assets/petri_dish_tile.tres" id="2_ouoex"]
 
-[node name="Microbe Station" type="Node3D"]
+[node name="MicrobeStation" type="Node3D"]
+script = ExtResource("1_0827l")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+shadow_enabled = true
 
 [node name="Table" parent="." instance=ExtResource("1_s8m6q")]
 
-[node name="GridMap" type="GridMap" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.75, 0.859105, -0.5)
+[node name="PetriGrid" type="GridMap" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.75, 0.853, -0.5)
 mesh_library = ExtResource("2_ouoex")
 cell_size = Vector3(0.25, 0.25, 0.25)
 cell_center_x = false
@@ -17,5 +23,9 @@ cell_center_z = false
 data = {
 "cells": PackedInt32Array(0, 0, 0, 65535, 0, 0, 65534, 0, 0, 65533, 0, 0, 65535, 1, 0)
 }
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-1, -6.62945e-15, 8.74228e-08, 8.44439e-08, 0.258819, 0.965926, -2.26267e-08, 0.965926, -0.258819, 0, 3.25, -0.75)
+fov = 35.0
 
 [editable path="Table"]
