@@ -9,26 +9,12 @@ class_name MicrobeStation
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	petri_grid.clear()
+	petri_grid.position.y = table_height
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	
-	var grid_mouse_position: Vector3 = mouse_to_grid(petri_grid, table_height)
+	var grid_mouse_position: Vector3 = petri_grid.mouse_to_grid()
 	print(grid_mouse_position)
 	petri_grid.clear()
 	petri_grid.set_cell_item(grid_mouse_position, 0)
-
-# grid highlighting 
-func mouse_to_grid(grid: GridMap, table_height: float) -> Vector3:
-	
-	var viewport: Viewport = get_viewport()
-	var mouse_position: Vector2 = viewport.get_mouse_position()
-	var camera: Camera3D = viewport.get_camera_3d()
-	var origin: Vector3 = camera.project_ray_origin(mouse_position)
-	var direction: Vector3 = camera.project_ray_normal(mouse_position)
-	var ray_length: float = camera.far
-	var end: Vector3 = origin + direction * ray_length
-	# orthogonal plane intersection is simple
-	var d: float = ((Vector3(0, table_height, 0) - origin).dot(Vector3.UP)) / (direction.dot(Vector3.UP))
-	var global_mouse_position_3d: Vector3 = origin + (d * direction)
-	return grid.local_to_map(grid.to_local(global_mouse_position_3d + (grid.cell_size / 2)))

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://djfprdtm8jyxe"]
+
+[ext_resource type="MeshLibrary" uid="uid://xgjomwbvfh0o" path="res://Assets/petri_dish_tile.tres" id="1_wctr0"]
+[ext_resource type="Script" path="res://Scenes/clickable_grid.gd" id="2_r7gcw"]
+
+[node name="ClickableGrid" type="GridMap"]
+mesh_library = ExtResource("1_wctr0")
+cell_size = Vector3(0.25, 0.25, 0.25)
+cell_center_x = false
+cell_center_y = false
+cell_center_z = false
+data = {
+"cells": PackedInt32Array(0, 0, 0, 65535, 0, 0, 65534, 0, 0, 65533, 0, 0, 65535, 1, 0)
+}
+script = ExtResource("2_r7gcw")
