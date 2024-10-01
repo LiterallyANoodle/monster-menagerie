@@ -1,7 +1,7 @@
 extends GridMap
 class_name ClickableGrid
 
-func mouse_to_grid(axis: Vector3 = Vector3.UP) -> Vector3:
+func mouse_to_grid(axis: Vector3 = Vector3.UP) -> Vector3i:
 	
 	var viewport: Viewport = get_viewport()
 	var mouse_position: Vector2 = viewport.get_mouse_position()
